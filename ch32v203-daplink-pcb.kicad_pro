@@ -55,11 +55,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "hole_clearance|34660000|28850000|75c75a97-00de-42a2-8481-20a075205fc3|2f5597b4-e331-4719-a029-69452a7061a3",
-        "hole_clearance|34660000|34650000|85958ec7-7d05-495b-9975-b068f500c7d0|96ca7de7-a6ed-4eac-a893-44b7966039f6",
-        "silk_edge_clearance|29210000|28090000|59e508db-ea04-4d6f-a0a4-c895ea59988e|eb918380-2b25-419c-9d77-83cf95cc210b"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -472,6 +468,10 @@
       {
         "netclass": "Default",
         "pattern": "GND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VCC"
       }
     ]
   },

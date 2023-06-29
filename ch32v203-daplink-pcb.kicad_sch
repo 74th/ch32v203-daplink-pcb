@@ -5,11 +5,11 @@
   (paper "A4")
 
   (lib_symbols
-    (symbol "$74th:DAPLink-SWD-Send-10Pin" (in_bom yes) (on_board yes)
+    (symbol "$74th:DAPLink-SWD-Send-Side10Pin" (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 0 7.62 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "DAPLink-SWD-Send-10Pin" (at 0 5.08 0)
+      (property "Value" "DAPLink-SWD-Send-Side10Pin" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -18,51 +18,51 @@
       (property "Datasheet" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "DAPLink-SWD-Send-10Pin_0_1"
+      (symbol "DAPLink-SWD-Send-Side10Pin_0_1"
         (rectangle (start -6.35 3.81) (end 6.35 -8.89)
           (stroke (width 0) (type default))
           (fill (type background))
         )
       )
-      (symbol "DAPLink-SWD-Send-10Pin_1_1"
-        (pin input line (at -8.89 2.54 0) (length 2.54)
-          (name "RXD" (effects (font (size 1.27 1.27))))
+      (symbol "DAPLink-SWD-Send-Side10Pin_1_1"
+        (pin power_in line (at -8.89 2.54 0) (length 2.54)
+          (name "3V3" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at 8.89 -7.62 180) (length 2.54)
+          (name "3V3" (effects (font (size 1.27 1.27))))
+          (number "10" (effects (font (size 1.27 1.27))))
         )
         (pin power_in line (at 8.89 2.54 180) (length 2.54)
           (name "5V" (effects (font (size 1.27 1.27))))
-          (number "10" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at -8.89 0 0) (length 2.54)
-          (name "TXD" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin bidirectional line (at -8.89 -2.54 0) (length 2.54)
+        (pin bidirectional line (at -8.89 0 0) (length 2.54)
           (name "SWD" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
-        (pin output line (at -8.89 -5.08 0) (length 2.54)
-          (name "SCK" (effects (font (size 1.27 1.27))))
+        (pin input line (at 8.89 0 180) (length 2.54)
+          (name "RXD" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin output line (at -8.89 -2.54 0) (length 2.54)
+          (name "SCK" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin output line (at 8.89 -2.54 180) (length 2.54)
+          (name "TXD" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at -8.89 -5.08 0) (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at 8.89 -5.08 180) (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27))))
         )
         (pin output line (at -8.89 -7.62 0) (length 2.54)
           (name "RST" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 8.89 -7.62 180) (length 2.54)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 8.89 -5.08 180) (length 2.54)
-          (name "3V3" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 8.89 -2.54 180) (length 2.54)
-          (name "3V3" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 8.89 0 180) (length 2.54)
-          (name "GND" (effects (font (size 1.27 1.27))))
           (number "9" (effects (font (size 1.27 1.27))))
         )
       )
@@ -1744,7 +1744,7 @@
   (symbol (lib_id "Device:R") (at 238.76 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 021f968c-1e5a-49a4-a667-4c185d4d6ef8)
-    (property "Reference" "R7" (at 241.3 68.5799 0)
+    (property "Reference" "R6" (at 241.3 68.5799 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5.1k" (at 241.3 71.1199 0)
@@ -1761,7 +1761,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "R7") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -1865,7 +1865,7 @@
   (symbol (lib_id "Device:C") (at 201.93 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ab8c501-e858-4d85-a160-88b5a679bdf1)
-    (property "Reference" "C5" (at 205.74 143.5099 0)
+    (property "Reference" "C4" (at 205.74 143.5099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 205.74 146.0499 0)
@@ -1882,7 +1882,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C5") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -1921,7 +1921,7 @@
   (symbol (lib_id "Device:C") (at 212.09 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0e38bafa-7f9a-468e-921e-3d315df538eb)
-    (property "Reference" "C6" (at 215.9 143.5099 0)
+    (property "Reference" "C3" (at 215.9 143.5099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 215.9 146.0499 0)
@@ -1938,7 +1938,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C6") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2009,7 +2009,7 @@
   (symbol (lib_id "$74th:SWD-Debugger_Side-10Pin") (at 242.57 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1945692f-7d04-408f-9f0d-1fce65419363)
-    (property "Reference" "J3" (at 242.57 113.03 0)
+    (property "Reference" "J2" (at 242.57 113.03 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DAPLink-SWD-Send-6Pin" (at 242.57 115.57 0)
@@ -2034,7 +2034,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "J3") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -2071,7 +2071,7 @@
   (symbol (lib_id "Device:C") (at 110.49 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1a89859b-271d-4689-9dcc-edd13943c32c)
-    (property "Reference" "C4" (at 114.3 83.8199 0)
+    (property "Reference" "C9" (at 114.3 83.8199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 114.3 86.3599 0)
@@ -2088,7 +2088,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C4") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2247,7 +2247,7 @@
   (symbol (lib_id "Device:C") (at 85.09 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3662c887-48b7-4e5b-95d0-61c7fc486e0f)
-    (property "Reference" "C2" (at 88.9 83.8199 0)
+    (property "Reference" "C8" (at 88.9 83.8199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 88.9 86.3599 0)
@@ -2264,7 +2264,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C2") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2278,7 +2278,7 @@
   (symbol (lib_id "Device:C") (at 260.35 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37da1183-b481-4c5f-b1cb-5c066437c2a5)
-    (property "Reference" "C10" (at 264.16 48.2599 0)
+    (property "Reference" "C5" (at 264.16 48.2599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2.2u" (at 264.16 50.7999 0)
@@ -2295,7 +2295,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C10") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2536,7 +2536,7 @@
   (symbol (lib_id "Device:R") (at 63.5 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 58b97165-9d87-4140-9d9c-dadb72c2feb6)
-    (property "Reference" "R2" (at 66.04 30.4799 0)
+    (property "Reference" "R5" (at 66.04 30.4799 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 66.04 33.0199 0)
@@ -2553,7 +2553,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "R2") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2657,7 +2657,7 @@
   (symbol (lib_id "Device:R") (at 90.17 29.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 68255cdb-b9a2-41b7-a726-b4c5246277c2)
-    (property "Reference" "R1" (at 92.71 27.9399 0)
+    (property "Reference" "R3" (at 92.71 27.9399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 92.71 30.4799 0)
@@ -2674,7 +2674,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "R1") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2688,7 +2688,7 @@
   (symbol (lib_id "Device:R") (at 90.17 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 703b7b5c-cafa-446c-bb10-efe29c3d4790)
-    (property "Reference" "R4" (at 92.71 44.4499 0)
+    (property "Reference" "R1" (at 92.71 44.4499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 92.71 46.9899 0)
@@ -2705,7 +2705,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "R4") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2809,7 +2809,7 @@
   (symbol (lib_id "Device:R") (at 31.75 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 81641196-57f9-407b-a038-4e24fee21378)
-    (property "Reference" "R3" (at 34.29 121.9199 0)
+    (property "Reference" "R2" (at 34.29 121.9199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 34.29 124.4599 0)
@@ -2826,7 +2826,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "R3") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2870,7 +2870,7 @@
   (symbol (lib_id "Device:R") (at 273.05 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8abb7d85-686a-4df7-a10e-040a0fd079f8)
-    (property "Reference" "R8" (at 275.59 48.2599 0)
+    (property "Reference" "R4" (at 275.59 48.2599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5.1k" (at 275.59 50.7999 0)
@@ -2887,7 +2887,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "R8") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -2991,7 +2991,7 @@
   (symbol (lib_id "Device:LED") (at 63.5 39.37 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 981e3c77-bdc0-4ac7-aca1-f1eda5893c28)
-    (property "Reference" "D2" (at 67.31 39.6874 90)
+    (property "Reference" "D1" (at 67.31 39.6874 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Blue" (at 67.31 42.2274 90)
@@ -3008,7 +3008,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "D2") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3052,7 +3052,7 @@
   (symbol (lib_id "Device:C") (at 97.79 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a7823c38-6ddf-4b86-a708-638c72d635a8)
-    (property "Reference" "C3" (at 101.6 83.8199 0)
+    (property "Reference" "C6" (at 101.6 83.8199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100n" (at 101.6 86.3599 0)
@@ -3069,7 +3069,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C3") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3083,7 +3083,7 @@
   (symbol (lib_id "Device:Crystal_GND24") (at 134.62 177.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a84102f6-d18c-4ef3-bbcc-4ea19bf1a408)
-    (property "Reference" "Y2" (at 140.97 173.101 90)
+    (property "Reference" "Y1" (at 140.97 173.101 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8M" (at 140.97 175.641 90)
@@ -3102,7 +3102,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "Y2") (unit 1)
+          (reference "Y1") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3116,7 +3116,7 @@
   (symbol (lib_id "Device:C") (at 148.59 182.88 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b121c315-06ba-4b79-a2b5-b114906fb778)
-    (property "Reference" "C8" (at 149.86 176.53 90)
+    (property "Reference" "C1" (at 149.86 176.53 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22p" (at 151.13 179.07 90)
@@ -3133,7 +3133,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C8") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3147,7 +3147,7 @@
   (symbol (lib_id "Device:R") (at 227.33 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b6818e15-b789-4185-8797-31374fb66c8c)
-    (property "Reference" "R6" (at 229.87 68.5799 0)
+    (property "Reference" "R7" (at 229.87 68.5799 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5.1k" (at 229.87 71.1199 0)
@@ -3164,7 +3164,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "R6") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3238,7 +3238,7 @@
   (symbol (lib_id "Device:C") (at 231.14 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bdef873f-5230-4139-8c2b-09b22a7d05cb)
-    (property "Reference" "C9" (at 234.95 48.2599 0)
+    (property "Reference" "C7" (at 234.95 48.2599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 234.95 50.7999 0)
@@ -3255,7 +3255,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C9") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3364,7 +3364,7 @@
   (symbol (lib_id "Device:C") (at 148.59 172.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ce5e4f06-f910-4f47-a8be-53407ff9569c)
-    (property "Reference" "C7" (at 148.59 166.37 90)
+    (property "Reference" "C2" (at 148.59 166.37 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "22p" (at 148.59 168.91 90)
@@ -3381,7 +3381,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "C7") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3395,7 +3395,7 @@
   (symbol (lib_id "Device:LED") (at 273.05 57.15 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d27cc9d1-3918-43fb-84a5-69f78364c7ae)
-    (property "Reference" "D1" (at 276.86 57.4674 90)
+    (property "Reference" "D2" (at 276.86 57.4674 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Red" (at 276.86 60.0074 90)
@@ -3412,7 +3412,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "D1") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
       (project "ch32v203-promicro"
@@ -3453,16 +3453,16 @@
     )
   )
 
-  (symbol (lib_id "$74th:DAPLink-SWD-Send-10Pin") (at 182.88 133.35 0) (unit 1)
+  (symbol (lib_id "$74th:DAPLink-SWD-Send-Side10Pin") (at 182.88 133.35 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d6e54db3-dcb8-46ed-8e53-e8ef01b6b6ff)
-    (property "Reference" "J2" (at 182.88 125.73 0)
+    (property "Reference" "J3" (at 182.88 125.73 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DAPLink-SWD-Send-10Pin" (at 182.88 128.27 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "$74th:DAPLink-SWD" (at 182.88 133.35 0)
+    (property "Footprint" "$74th:Side-2x5P-PinHeader-Right" (at 182.88 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 182.88 133.35 0)
@@ -3481,7 +3481,7 @@
     (instances
       (project "ch32v203-daplink-pcb"
         (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "J2") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )

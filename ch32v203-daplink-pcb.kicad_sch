@@ -1351,7 +1351,7 @@
     (stroke (width 0) (type default))
     (uuid 98c227ac-5557-4c94-a639-26f62afa7c22)
   )
-  (wire (pts (xy 90.17 33.02) (xy 93.98 33.02))
+  (wire (pts (xy 90.17 25.4) (xy 93.98 25.4))
     (stroke (width 0) (type default))
     (uuid 9b6b54d8-6d1d-4863-8602-7979a58e794b)
   )
@@ -1457,13 +1457,13 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "BOOT0" (shape input) (at 93.98 33.02 0) (fields_autoplaced)
+  (global_label "BOOT0" (shape input) (at 93.98 25.4 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 08016903-28b6-4f7d-b05e-426be8c2de0d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 102.9939 33.02 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 102.9939 25.4 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "シート間のリファレンス" "${INTERSHEET_REFS}" (at 93.98 35.2108 0)
+    (property "シート間のリファレンス" "${INTERSHEET_REFS}" (at 93.98 27.5908 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2654,6 +2654,36 @@
     )
   )
 
+  (symbol (lib_id "power:+3V3") (at 31.75 111.76 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 5ef730df-e262-4c91-a950-8826bda84e9c)
+    (property "Reference" "#PWR06" (at 31.75 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 31.75 106.68 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 31.75 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 31.75 111.76 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 11bac4ad-7fa4-43e1-9c1e-04db7f394b44))
+    (instances
+      (project "ch32v203-daplink-pcb"
+        (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "ch32v203-promicro"
+        (path "/afcc1797-22e9-4a4e-a23b-4101109b7b33"
+          (reference "#PWR0117") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R") (at 90.17 29.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 68255cdb-b9a2-41b7-a726-b4c5246277c2)
@@ -2806,19 +2836,19 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 31.75 123.19 0) (unit 1)
+  (symbol (lib_id "Device:R") (at 31.75 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 81641196-57f9-407b-a038-4e24fee21378)
-    (property "Reference" "R2" (at 34.29 121.9199 0)
+    (property "Reference" "R2" (at 34.29 114.2999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10k" (at 34.29 124.4599 0)
+    (property "Value" "10k" (at 34.29 116.8399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "$74th:Register_0603_1608" (at 29.972 123.19 90)
+    (property "Footprint" "$74th:Register_0603_1608" (at 29.972 115.57 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 31.75 123.19 0)
+    (property "Datasheet" "~" (at 31.75 115.57 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ec3ad979-b840-4179-9bae-bac63d943cef))
@@ -2832,36 +2862,6 @@
       (project "ch32v203-promicro"
         (path "/afcc1797-22e9-4a4e-a23b-4101109b7b33"
           (reference "R6") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 31.75 127 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 82fee37e-5e3c-4856-9493-6de740316188)
-    (property "Reference" "#PWR06" (at 31.75 133.35 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 34.29 128.2699 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 31.75 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 31.75 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5d233267-962a-4cdf-980c-92b7bdaa752b))
-    (instances
-      (project "ch32v203-daplink-pcb"
-        (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "#PWR06") (unit 1)
-        )
-      )
-      (project "ch32v203-promicro"
-        (path "/afcc1797-22e9-4a4e-a23b-4101109b7b33"
-          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -3014,36 +3014,6 @@
       (project "ch32v203-promicro"
         (path "/afcc1797-22e9-4a4e-a23b-4101109b7b33"
           (reference "D1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 90.17 25.4 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 996a7138-7dbd-44c8-b1a3-facf7f865b9f)
-    (property "Reference" "#PWR03" (at 90.17 29.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 90.17 20.32 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 90.17 25.4 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 90.17 25.4 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid eda924ea-833b-4321-9b49-2dbf84192cae))
-    (instances
-      (project "ch32v203-daplink-pcb"
-        (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
-          (reference "#PWR03") (unit 1)
-        )
-      )
-      (project "ch32v203-promicro"
-        (path "/afcc1797-22e9-4a4e-a23b-4101109b7b33"
-          (reference "#PWR0128") (unit 1)
         )
       )
     )
@@ -3296,6 +3266,36 @@
       (project "ch32v203-promicro"
         (path "/afcc1797-22e9-4a4e-a23b-4101109b7b33"
           (reference "J1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 90.17 33.02 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c69fb825-e47b-4ad7-b056-8c2b5ff33ef9)
+    (property "Reference" "#PWR03" (at 90.17 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 92.71 34.2899 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 90.17 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 90.17 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 092ac1ce-f5a0-4a75-bc80-19c9cea5efc0))
+    (instances
+      (project "ch32v203-daplink-pcb"
+        (path "/159a7907-fbf4-4cbf-a918-6615e794ddfa"
+          (reference "#PWR03") (unit 1)
+        )
+      )
+      (project "ch32v203-promicro"
+        (path "/afcc1797-22e9-4a4e-a23b-4101109b7b33"
+          (reference "#PWR02") (unit 1)
         )
       )
     )

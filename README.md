@@ -43,7 +43,8 @@ R2、R3 は NC にすること。
 | J1         | USB Type-C Receptacle              | 1        |
 | J2         | Box Pin Header 2x5 Pitch 1.27mm    | 1        |
 | J3         | Pin Header 2x5 Pitch 2.54mm        | 1        |
-| R1-R3, R5  | Register 0603 10kΩ                 | 4        |
+| R1, R5     | Register 0603 10kΩ                 | 2        |
+| R2, R3     | NC                                 | 2        |
 | R4, R6, R7 | Register 0603 5.1kΩ                | 3        |
 | SW1        | Slide Switch                       | 1        |
 | U1         | MCU LQFP48 WCH CH32V203C8T6        | 1        |
